@@ -1,0 +1,30 @@
+name: "image"
+port: 8080
+mode: "release"
+start_time: "2021-09-17"
+machine_id: 1
+
+
+log:
+  level: "info"
+  filename: "image_log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+
+mysql:
+  host: rm-bp1of243n5gbs3bl1zo.mysql.rds.aliyuncs.com
+  port: 3306
+  user: yuanjun
+  password: Yuanjun0903
+  db: image
+  max_open_conns: 100
+  max_idle_conns: 20
+
+redis:
+  host: yuanjun-redis001.redis.rds.aliyuncs.com
+  port: 6379
+  user: yuanjun
+  password: Yuanjun0903
+  db: 0
+  pool_size: 100
