@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/bwmarrin/snowflake v0.3.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/disintegration/imaging v1.6.2
 	github.com/fsnotify/fsnotify v1.5.1
 	github.com/gin-gonic/gin v1.7.7
 	github.com/go-playground/locales v0.14.0
@@ -39,6 +40,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3 // indirect
+	golang.org/x/image v0.0.0-20191009234506-e7c1f5e7dbb8 // indirect
 	golang.org/x/sys v0.0.0-20211210111614-af8b64212486 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect

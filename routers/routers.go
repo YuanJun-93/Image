@@ -16,11 +16,17 @@ func SetUpRouter() *gin.Engine {
 	v1 := r.Group("/api/v1")
 
 	// 用户功能
-	/*
-		eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo2NTQyODkwMzk4Mzg0NTM3NiwidXNlcm5hbWUiOiJ5dWFuanVuIiwiZXhwIjoxNjUwMDI4NTY0LCJpc3MiOiJpbWFnZSJ9.MtkB_93EE4iwuqvhKTBAAzvXpRHwoUOg2EN_yPwvJB4
-	*/
 	v1.POST("/register", controller.RegisterHandler) // 注册
 	v1.POST("/login", controller.LoginHandler)       // 登录
+
+	v1.GET("/image/bright/:id", controller.AdjustBrightnessHandler) // 图片亮度
+	v1.GET("/image/contrast/:id", controller.AdjustContrastHandler) // 图片对比度
+	v1.GET("/image/gamma/:id", controller.AdjustGammaHandler) // Gamma
+	v1.GET("/image/saturation/:id", controller.AdjustSaturationHandler) // 图片饱和度
+	v1.GET("/image/blur/:id", controller.BlurHandler) // 高斯模糊
+	v1.GET("/image/cropCenter/:id", controller.CropCenterHandler) // 中心裁剪
+	v1.GET("/image/invert/:id", controller.InvertHandler) // 色系反转
+
 
 	// 需要登录之后才能做的操作
 	v1.Use(middlewares.JWTAuthMiddleware())
