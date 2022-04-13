@@ -8,7 +8,7 @@ import (
 	"image/model"
 )
 
-const secret = "weibo"
+const secret = "youyou"
 
 func encryPassword(data []byte) (result string) {
 	h := md5.New()
